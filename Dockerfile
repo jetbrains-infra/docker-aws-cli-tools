@@ -11,7 +11,7 @@ RUN apk --no-cache update && \
     pip --no-cache-dir install awscli==${AWS_CLI_VERSION} && \
     rm -rf /var/cache/apk/*
     
-COPY s3.sh /
+COPY s3.sh mysqldump-to-s3.sh /
 RUN chmod a+x /*.sh
 
 WORKDIR /data
