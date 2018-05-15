@@ -31,3 +31,24 @@ To run:
 docker run [opts] [env_vars] jetbrainsinfra/aws-cli-tools /s3.sh 
 ```
 
+## restore-mysql-rsync-s3.sh
+
+To restore combined backup from various places.
+
+There are enviromental variables to set:
+* MYSQL_HOST
+* MYSQL_DB
+* MYSQL_USER
+* MYSQL_PASSWORD
+* MYSQL_DUMP_LOCATION
+* FILE_DUMP_LOCATION
+* FILE_ORIGIN
+* FILE_DESTINATION
+* BACKUP_S3_ORIGIN
+* DATA_S3_ORIGIN
+* DATA_S3_DESTINATION
+
+To run:
+```
+docker run [opts] [env_vars] jetbrainsinfra/aws-cli-tools /restore-mysql-rsync-s3.sh 
+```
